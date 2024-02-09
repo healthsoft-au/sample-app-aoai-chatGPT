@@ -5,3 +5,9 @@ frontend/node_modules
 .azure/
 __pycache__/
 .ipynb_checkpoints/
+.vs/LicensingCopilot/v17/DocumentLayout.json
+.vs/ProjectSettings.json
+.vs/VSWorkspaceState.json
+.vs/LicensingCopilot/FileContentIndex/82fc582e-6204-4cd0-8809-2dab14263c5e.vsidx
+.vs/LicensingCopilot/v17/.wsuo
+.vs/slnx.sqlite
