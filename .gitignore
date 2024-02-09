@@ -11,3 +11,4 @@ __pycache__/
 .vs/LicensingCopilot/FileContentIndex/82fc582e-6204-4cd0-8809-2dab14263c5e.vsidx
 .vs/LicensingCopilot/v17/.wsuo
 .vs/slnx.sqlite
+.env.local
