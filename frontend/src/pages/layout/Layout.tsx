@@ -1,6 +1,6 @@
 import { Outlet, Link } from "react-router-dom";
 import styles from "./Layout.module.css";
-import Contoso from "../../assets/Hsft-Logo.png";
+import HsftLogo from "../../assets/Hsft-Logo.png";
 import { CopyRegular, ShareRegular } from "@fluentui/react-icons";
 import { Dialog, Stack, TextField, ICommandBarStyles, IButtonStyles } from "@fluentui/react";
 import { useContext, useEffect, useState } from "react";
@@ -47,21 +47,19 @@ const Layout = () => {
                 <Stack horizontal verticalAlign="center" horizontalAlign="space-between">
                     <Stack horizontal verticalAlign="center">
                         <img
-                            src={Contoso}
+                            src={HsftLogo}
                             className={styles.headerIcon}
                             aria-hidden="true"
                         />
                         <Link to="/" className={styles.headerTitleContainer}>
-                            <h1 className={styles.headerTitle}>Licensing Copilot</h1>
+                            <h1 className={styles.headerTitle}>Healthsoft Licensing Copilot</h1>
                         </Link>
                     </Stack>
                     <Stack horizontal tokens={{ childrenGap: 4 }}>
                         {(appStateContext?.state.isCosmosDBAvailable?.status !== CosmosDBStatus.NotConfigured) &&
                             <HistoryButton onClick={handleHistoryClick} text={appStateContext?.state?.isChatHistoryOpen ? "Hide chat history" : "Show chat history"} />
                         }
-                        {/* <ShareButton onClick={handleShareClick} /> */}
                     </Stack>
-
                 </Stack>
             </header>
             <Outlet />

@@ -4,13 +4,14 @@ interface ShareButtonProps extends IButtonProps {
     onClick: () => void;
   }
 
+  /* NISM: Updated button background colors */
 export const ShareButton: React.FC<ShareButtonProps> = ({onClick}) => {
     const shareButtonStyles: ICommandBarStyles & IButtonStyles = {
         root: {
           width: 86,
           height: 32,
           borderRadius: 4,
-          background: 'radial-gradient(109.81% 107.82% at 100.1% 90.19%, #0F6CBD 33.63%, #2D87C3 70.31%, #8DDDD8 100%)',
+          background: 'radial-gradient(109.81% 107.82% at 100.1% 90.19%, darkgreen 33.63%, #339933 70.31%, lightgreen 100%)',
         //   position: 'absolute',
         //   right: 20,
           padding: '5px 12px',
@@ -20,7 +21,7 @@ export const ShareButton: React.FC<ShareButtonProps> = ({onClick}) => {
           color: '#FFFFFF',
         },
         rootHovered: {
-          background: 'linear-gradient(135deg, #0F6CBD 0%, #2D87C3 51.04%, #8DDDD8 100%)',
+          background: 'linear-gradient(135deg, darkgreen 0%, #339933 51.04%, lightgreen 100%)',
         },
         label: {
           fontWeight: 600,
