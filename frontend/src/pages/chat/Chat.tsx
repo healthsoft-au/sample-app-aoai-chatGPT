@@ -617,6 +617,9 @@ const Chat = () => {
         return isLoading || (messages && messages.length === 0) || clearingChat || appStateContext?.state.chatHistoryLoadingState === ChatHistoryLoadingState.Loading
     }
 
+    /* Chat Page Layout
+    TODO: Remove Auth for Demo
+    */
     return (
         <div className={styles.container} role="main">
             {showAuthMessage ? (
@@ -633,6 +636,7 @@ const Chat = () => {
                     <h2 className={styles.chatEmptyStateSubtitle} style={{ fontSize: "20px" }}><strong>If you deployed in the last 10 minutes, please wait and reload the page after 10 minutes.</strong></h2>
                 </Stack>
             ) : (
+                /* Chat Window */
                 <Stack horizontal className={styles.chatRoot}>
                     <div className={styles.chatContainer}>
                         {!messages || messages.length < 1 ? (
@@ -642,8 +646,8 @@ const Chat = () => {
                                     className={styles.chatIcon}
                                     aria-hidden="true"
                                 />
-                                <h1 className={styles.chatEmptyStateTitle}>Start chatting</h1>
-                                <h2 className={styles.chatEmptyStateSubtitle}>This chatbot is configured to answer your questions</h2>
+                                <h1 className={styles.chatEmptyStateTitle}>Healthsoft Licensing Copilot</h1>
+                                <h2 className={styles.chatEmptyStateSubtitle}>This copilot is here to help you answer Microsoft licensing questions</h2>
                             </Stack>
                         ) : (
                             <div className={styles.chatMessageStream} style={{ marginBottom: isLoading ? "40px" : "0px" }} role="log">
@@ -679,7 +683,7 @@ const Chat = () => {
                                         <div className={styles.chatMessageGpt}>
                                             <Answer
                                                 answer={{
-                                                    answer: "Generating answer...",
+                                                    answer: "Reading the licensing documents...",
                                                     citations: []
                                                 }}
                                                 onCitationClicked={() => null}
