@@ -16,6 +16,15 @@ html {
     -moz-osx-font-smoothing: grayscale;
 }
 
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f3f3f3;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
 #root {
     height: 100%;
 }
