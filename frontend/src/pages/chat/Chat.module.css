@@ -325,7 +325,7 @@ a {
     cursor: pointer;
 }
 
-/* Adjustments for mobile screens */
+/* NISM: Adjustments for mobile screens */
 @media (max-width: 600px) {
     .chatInput {
         position: relative; /* Ensure positioning is relative to allow contained elements to position more predictably */
@@ -340,3 +340,28 @@ a {
         top: -50px; /* Example adjustment */
     }
 }
+
+/* Base button style */
+.commandBarButton {
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 4px;
+    color: white;
+    background-image: radial-gradient(circle, #006400, #339933, #8FBC8F);
+}
+
+.commandBarButtonDisabled {
+    background: #F0F0F0;
+    color: #BDBDBD !important; /* Note: Using !important in CSS is generally not recommended unless absolutely necessary */
+}
+
+.newChatIcon, .clearChatBroom, .clearChatBroomNoCosmos {
+    /* These classes will inherit the .commandBarButton styles */
+    /* Add any specific styles for these classes if needed */
+}
+
