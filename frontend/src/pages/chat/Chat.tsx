@@ -10,7 +10,7 @@ import { isEmpty } from "lodash-es";
 import DOMPurify from 'dompurify';
 
 import styles from "./Chat.module.css";
-import HsftLogo from "../../assets/Hsft-Logo.png";
+import HsftLogo from "../../assets/Hsft-Full-Logo.png";
 import { XSSAllowTags } from "../../constants/xssAllowTags";
 
 import {
@@ -646,7 +646,7 @@ const Chat = () => {
                                     className={styles.chatIcon}
                                     aria-hidden="true"
                                 />
-                                <h1 className={styles.chatEmptyStateTitle}>Healthsoft Licensing Copilot</h1>
+                                <h1 className={styles.chatEmptyStateTitle}>Licensing Copilot</h1>
                                 <h2 className={styles.chatEmptyStateSubtitle}>Here to help you answer your Microsoft licensing questions</h2>
                             </Stack>
                         ) : (

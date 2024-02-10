@@ -324,3 +324,19 @@ a {
     text-decoration: underline;
     cursor: pointer;
 }
+
+/* Adjustments for mobile screens */
+@media (max-width: 600px) {
+    .chatInput {
+        position: relative; /* Ensure positioning is relative to allow contained elements to position more predictably */
+        padding-bottom: 100px; /* Increase padding to accommodate vertically stacked buttons */
+    }
+    .newChatIcon, .clearChatBroom, .clearChatBroomNoCosmos {
+        position: static; /* Temporarily remove absolute positioning on mobile */
+        margin: 10px auto; /* Center buttons and add some margin */
+    }
+    .stopGeneratingContainer {
+        bottom: auto; /* Adjust or remove positioning to prevent overlap */
+        top: -50px; /* Example adjustment */
+    }
+}
