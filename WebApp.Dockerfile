@@ -29,4 +29,4 @@ COPY --from=frontend /home/node/app/static  /usr/src/app/static/
 WORKDIR /usr/src/app  
 
 EXPOSE 80  
-CMD ["python", "-m", "gunicorn", "app:app"]
+CMD ["python3", "-m", "gunicorn", "app:app"]
