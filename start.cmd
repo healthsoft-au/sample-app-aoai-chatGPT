@@ -32,8 +32,20 @@ echo.
 echo Starting backend    
 echo.    
 cd ..  
+@REM start http://127.0.0.1:50505
+@REM call gunicorn app:app  
+
+:: NISM
+:: Start Uvicorn server in a new command prompt window
+start cmd /k uvicorn app:app
+
+:: Delay for a few seconds to allow the server to start up (adjust the timeout as necessary)
+timeout /t 5
+
+:: Open the default web browser at the server's address
 start http://127.0.0.1:50505
-call uvicorn app:app  
+
+
 if "%errorlevel%" neq "0" (    
     echo Failed to start backend    
     exit /B %errorlevel%    

@@ -104,6 +104,7 @@ export type ErrorMessage = {
 export type FrontendSettings = {
     auth_enabled?: string | null;
     feedback_enabled?: string | null;
+    show_chat_history_button?: string | null; // NISM
 }
 
 export enum Feedback {

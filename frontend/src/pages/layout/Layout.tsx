@@ -13,6 +13,7 @@ const Layout = () => {
     const [copyClicked, setCopyClicked] = useState<boolean>(false);
     const [copyText, setCopyText] = useState<string>("Copy URL");
     const appStateContext = useContext(AppStateContext)
+    const SHOW_CHAT_HISTORY_BUTTON = appStateContext?.state.frontendSettings?.show_chat_history_button;
 
     const handleShareClick = () => {
         setIsSharePanelOpen(true);
@@ -55,11 +56,13 @@ const Layout = () => {
                             <h1 className={styles.headerTitle}>Licensing Copilot</h1>
                         </Link>
                     </Stack>
+                    { SHOW_CHAT_HISTORY_BUTTON && 
                     <Stack horizontal tokens={{ childrenGap: 4 }}>
                         {(appStateContext?.state.isCosmosDBAvailable?.status !== CosmosDBStatus.NotConfigured) &&
                             <HistoryButton onClick={handleHistoryClick} text={appStateContext?.state?.isChatHistoryOpen ? "Hide chat history" : "Show chat history"} />
                         }
                     </Stack>
+                    }
                 </Stack>
             </header>
             <Outlet />

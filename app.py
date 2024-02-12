@@ -158,10 +158,12 @@ AZURE_MLINDEX_QUERY_TYPE = os.environ.get("AZURE_MLINDEX_QUERY_TYPE")
 
 # Frontend Settings via Environment Variables
 AUTH_ENABLED = os.environ.get("AUTH_ENABLED", "true").lower() == "true"
+SHOW_CHAT_HISTORY_BUTTON = os.environ.get("SHOW_CHAT_HISTORY_BUTTON", "true").lower() == "true" #NISM: Added switch to show and hide chat hsitory button in variables
 CHAT_HISTORY_ENABLED = AZURE_COSMOSDB_ACCOUNT and AZURE_COSMOSDB_DATABASE and AZURE_COSMOSDB_CONVERSATIONS_CONTAINER
 frontend_settings = { 
     "auth_enabled": AUTH_ENABLED, 
     "feedback_enabled": AZURE_COSMOSDB_ENABLE_FEEDBACK and CHAT_HISTORY_ENABLED,
+    "show_chat_history_button":SHOW_CHAT_HISTORY_BUTTON
 }
 
 message_uuid = ""
